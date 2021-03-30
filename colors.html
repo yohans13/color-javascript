@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style type="text/css">
+		h1{
+			text-align: center;
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			widows: 100%;
+			letter-spacing: 1em;
+		}
+
+		body{
+			top:15%;
+			text-align: center;
+			color: rgb(0,0,0,.5);
+			letter-spacing: 5em;
+			background: linear-gradient(to right ,red,yellow);
+		}
+	</style>
+
+</head>
+<body id="gradients">
+
+	<h1> GRADIANTS COLORS </h1>
+	<input type="color" class="c1" name="c1" value="#00ff00">
+	<input type="color" class="c2" name="c2" value="#ff0000">
+
+	<script>
+		
+		var color1=document.querySelector(".c1");
+		var color2=document.querySelector(".c2");
+		var body=document.getElementById("gradients");
+
+		color1.addEventListener("input",function(){
+			body.style.background="linear-gradient(to right," + color1.value + "," + color2.value + ")";
+		})
+
+		color2.addEventListener("input",function(){
+			body.style.background="linear-gradient(to right,"+color1.value+","+color2.value+")";
+		})
+
+
+
+	</script>
+</body>
+</html>
